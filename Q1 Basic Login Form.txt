@@ -1,0 +1,39 @@
+Q1 Basic Login Form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Login form</title>
+</head>
+<body>
+
+    <table>
+    <form action="" style="text-align: center;padding: 100px">
+        <tr>
+<td>
+    <label>Uid</label>
+    <input type="text" name="uid"><br>
+</td>
+        </tr>
+       
+<tr>
+    <td>
+        <label for="">PWD</label>
+        <input type="password" name="password"><br>
+    </td>
+</tr>
+       
+<tr>
+    <td>
+        <input type="submit" value="login">
+        <input type="reset" value="clear">
+    </td>
+</tr>
+
+       
+    </form>
+</table>
+</table>
+</body>
+</html>
