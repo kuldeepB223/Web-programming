@@ -1,0 +1,5 @@
+
+p{
+    color: brown; /*this brown colour is applied on text*/
+    text-shadow: 2px 2px yellow; /*and this yello colour is applied on shadow */
+}
