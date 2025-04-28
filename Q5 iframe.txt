@@ -1,0 +1,12 @@
+Q5 iframe
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Iframe</title>
+</head>
+<body>
+    
+    <iframe src="forms.html" style="border: 2px solid orange;" width="500" height="200"></iframe>
+
+</body>
+</html>
