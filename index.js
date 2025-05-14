@@ -1,8 +1,5 @@
-
 import ReactDOM from 'react-dom/client';
-import Information from './information';
-
+import Info from '../src/Que2info';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Information/>);
-
+root.render(<Info/>);
