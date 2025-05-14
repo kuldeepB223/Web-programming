@@ -1,8 +1,7 @@
 
 import ReactDOM from 'react-dom/client';
-import Users from './information';
+import Count from './information';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Users/>);
-
+root.render(<Count/>);
