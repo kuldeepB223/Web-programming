@@ -1,23 +1,17 @@
-import react, { useState } from "react";
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
-const Count =  ()=>{
+import { useState } from "react";
+import imgs from './logo.svg'
+function App(){
 
-    const [count,setCount]= useState(0);
-     function increment(){
-        setCount(count+1);
-     }
-     function decrement(){
-        setCount(count-1);
-     }
-
-    return (
-        <div>
-            <p>Count : {count}</p>
-            <button onClick={increment} className="btn btn-primary me-2"> Increase </button>  
-            <button onClick={decrement} className="btn btn-danger"> Decrease </button>
-        </div>
+    const[image, setimage] = useState(false);
+ 
+    function hideimg(){
+        setimage(!image);
+    }
+    return(
+        <>
+        <img hidden={image} src={imgs} height={200} width={200}></img>
+        <input type="checkbox" onClick={hideimg} checked={!image}></input>
+        </>
     )
-    
-};
-
-export default Count; 
+}
+export default App;
