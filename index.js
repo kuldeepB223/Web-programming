@@ -1,7 +1,8 @@
 
 import ReactDOM from 'react-dom/client';
-import App from './information';
+import Information from './information';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App/>);
+root.render(<Information/>);
 
