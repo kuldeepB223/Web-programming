@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="Disturb()">Click Me To Disturb</button> <br />
+    <button onclick="KeepCounting()">Click Me Start Counting</button> <br />
+    <div id="myDiv" style="font-size: xx-large"></div>
+    <script>
+      function Disturb() {
+        alert("Attend Me! I am important");
+      }
+
+      var counter = 0;
+
+      function KeepCounting() {
+        setInterval(() => {
+          var refTomyDiv = document.getElementById("myDiv");
+          counter = counter + 1;
+          refTomyDiv.innerText = counter;
+        }, 200);
+      }
+    </script>
+  </body>
+</html>

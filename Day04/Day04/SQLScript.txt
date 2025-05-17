@@ -1,0 +1,20 @@
+
+create database KnowIT;
+
+use KnowIT;
+create table Emp(No int primary key auto_increment, 
+				 Name varchar(50),
+				 Address varchar(50));
+                 
+insert into Emp(Name, Address) 
+	   values('Devesh', 'Kota');
+       
+insert into Emp(Name, Address) 
+	   values('Gaurav', 'Lucknow');
+       
+insert into Emp(Name, Address) 
+	   values('Dnyaneshwar', 'Latur');
+       
+select * from Emp;
+
+
