@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Check(f1, f2) {
+        if (10 > 2) {
+          f1();
+        } else {
+          f2();
+        }
+      }
+
+      //Check(OnSuccess, OnFailure);
+      var promise = new Promise(Check); //Check(resolve, reject);
+
+      //if the promise is fullfilled then call OnSuccess
+      // promise.then(OnSuccess);
+
+      promise.then(() => {
+        console.log("Wow!");
+      });
+
+      // promise
+      //   .then(() => {
+      //     console.log("Wow!");
+      //   })
+      //   .then(() => {
+      //     console.log("wah!");
+      //   });
+
+      // function OnSuccess() {
+      //   console.log("Wow!");
+      // }
+
+      //   function OnFailure() {
+      //     console.log("Not Wow!");
+      //   }
+    </script>
+  </body>
+</html>

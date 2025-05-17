@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Facebook ICON</h1>
+    <hr />
+    <div id="ProgressBar"></div>
+    <hr />
+
+    <div id="container" style="height: 500px; background-color: skyblue"></div>
+
+    <script>
+      var refToProgressBar = document.getElementById("ProgressBar");
+      refToProgressBar.innerHTML = `<img src="progress.png" alt="">`;
+
+      var helper = new XMLHttpRequest();
+      helper.onreadystatechange = () => {
+        // console.log(helper.readyState);
+        if (helper.readyState == 4 && helper.status == 200) {
+          debugger;
+          var responseDataInStringFomrat = helper.responseText;
+          var dataInJSON = JSON.parse(responseDataInStringFomrat);
+
+          var refToContainerDiv = document.getElementById("container");
+
+          for (i = 0; i < dataInJSON.length; i++) {
+            var obj = dataInJSON[i];
+
+            var perObjectUi = `<h1>${obj.No} | ${obj.Name} | ${obj.Address}</h1>`;
+
+            refToContainerDiv.innerHTML =
+              refToContainerDiv.innerHTML + perObjectUi;
+          }
+
+          refToProgressBar.innerHTML = "";
+        }
+      };
+      helper.open("GET", "http://127.0.0.1:5500/data.json");
+      helper.send();
+    </script>
+  </body>
+</html>

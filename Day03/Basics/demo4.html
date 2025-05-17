@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var promise = new Promise((resolve, reject) => {
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var data = JSON.parse(helper.responseText);
+            resolve(data);
+          }
+        };
+        helper.open("GET", "http://localhost:5500/data.json");
+        helper.send();
+      }); //Check(resolve, reject);
+
+      promise.then((data) => {
+        console.log("Wow!");
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
