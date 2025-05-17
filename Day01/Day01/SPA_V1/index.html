@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <a onclick="GoTo('home')">Home</a> |
+    <a onclick="GoTo('about')">About Us</a> |
+    <a onclick="GoTo('contact')">Contact Us</a> |
+    <hr />
+    <div id="root"></div>
+  </body>
+
+  <script>
+    function GoTo(pageName) {
+      // debugger;
+      var refToRootDiv = document.getElementById("root");
+
+      if (pageName == "home") {
+        refToRootDiv.innerHTML = `<h1>Welcome Home</h1>`;
+      } else if (pageName == "about") {
+        refToRootDiv.innerHTML = `<h1>This is about us!</h1>`;
+      } else if (pageName == "contact") {
+        refToRootDiv.innerHTML = `<h1>Contact Us Here..</h1>`;
+      }
+    }
+
+    GoTo("home");
+  </script>
+</html>
