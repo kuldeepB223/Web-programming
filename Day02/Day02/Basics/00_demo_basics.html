@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. Literal Syntax For Creating Object
+
+      //   var person = { No: 10, Name: "Sachin", Address: "Pune" };
+      //   //   console.log(person.Name);
+      //   console.log(person);
+      //   person.IsHappy = true;
+      //   console.log(person);
+      //   delete person.Name;
+      //   console.log(person);
+
+      //   var emp = {};
+      //   emp.__proto__ = person;
+      //   //   console.log(emp.Name);
+
+      //   emp.Dept = "IT";
+      //   console.log(emp);
+
+      //-------------------------------------------------------------
+      //2. Constructor Function Syntax for creating class / Object
+
+      //   var Person = function (no, name, address) {
+      //     this.No = no;
+      //     this.Name = name;
+      //     this.Address = address;
+
+      //     this.Print = function () {
+      //       console.log(this.No + this.Name + this.Address);
+      //     };
+      //   };
+
+      //   var p1 = new Person(10, "Sachin", "Pune");
+      //   var p2 = new Person(20, "Virat", "Delhi");
+
+      //   p1.Print();
+      //   p2.Print();
+
+      //-------------------------------------------------------------
+      //3: Class Keyword Syntax for creating class / Object
+
+      //ECMA 6 year: 2015
+      class Person {
+        constructor(no, name, address) {
+          this.No = no;
+          this.Name = name;
+          this.Address = address;
+        }
+
+        Print() {
+          console.log(this.No + this.Name + this.Address);
+        }
+      }
+
+      var p1 = new Person(10, "Sachin", "Pune");
+      var p2 = new Person(20, "Virat", "Delhi");
+
+      p1.Print();
+      p2.Print();
+
+      class Emp extends Person {}
+    </script>
+  </body>
+</html>
