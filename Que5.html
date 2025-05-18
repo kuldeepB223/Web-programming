@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function prime(num){
+            let isPrime = true;
+
+            if(num < 2){
+                isPrime = false;
+            }else{
+                for(let i = 2; i<=(num/2); i++){
+                    if(num % i ==0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            return isPrime;
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Prime number</h1>
+
+    <script>
+        prime(13) ? document.write("13 is a prime number") : document.write("13 is not a prime number");
+        prime(7) ? document.write("<br>7 is a prime number") : document.write("<br>7 is not a prime number");
+    </script>
+</body>
+</html>
